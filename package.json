@@ -1,0 +1,22 @@
+{
+  "name": "base-setting-for-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tehnikDaniyar/base-setting-for-Gulp.git"
+  },
+  "author": "Danik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tehnikDaniyar/base-setting-for-Gulp/issues"
+  },
+  "homepage": "https://github.com/tehnikDaniyar/base-setting-for-Gulp#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
