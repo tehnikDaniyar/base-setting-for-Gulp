@@ -1,5 +1,5 @@
-import * as  gulp from 'gulp';
-import path from './gulp/config/path.js';
+import gulp from 'gulp';
+import { path } from './gulp/config/path.js';
 
 global.app = {
 	gulp: gulp,
@@ -9,4 +9,4 @@ global.app = {
 //======tasks===============
 import { copy } from './gulp/tasks/copy.js';
 
-gulp.task('defoult', copy)
+gulp.task('default', copy)
