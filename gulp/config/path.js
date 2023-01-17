@@ -7,5 +7,8 @@ export const path = {
 	},
 	src: {
 		files: `${srcFolder}/files/**/*.*`,
+	},
+	whatch: {
+		files: `${srcFolder}/files/**/*.*`,
 	}
 }

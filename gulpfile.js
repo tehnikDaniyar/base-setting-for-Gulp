@@ -9,4 +9,11 @@ global.app = {
 //======tasks===============
 import { copy } from './gulp/tasks/copy.js';
 
-gulp.task('default', copy)
+//=====watcher==============
+const watcher = () => {
+	gulp.watch(path.whatch.files, copy);
+};
+
+const dev = gulp.series(copy, watcher)
+
+gulp.task('default', dev);
