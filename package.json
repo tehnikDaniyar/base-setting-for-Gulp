@@ -18,6 +18,7 @@
 	},
 	"homepage": "https://github.com/tehnikDaniyar/base-setting-for-Gulp#readme",
 	"devDependencies": {
+		"del": "^7.0.0",
 		"gulp": "^4.0.2"
 	}
 }

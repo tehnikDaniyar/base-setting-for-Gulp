@@ -8,12 +8,13 @@ global.app = {
 
 //======tasks===============
 import { copy } from './gulp/tasks/copy.js';
+import { reset } from './gulp/tasks/reset.js'
 
 //=====watcher==============
 const watcher = () => {
 	gulp.watch(path.whatch.files, copy);
 };
 
-const dev = gulp.series(copy, watcher)
+const dev = gulp.series(reset, copy, watcher)
 
 gulp.task('default', dev);

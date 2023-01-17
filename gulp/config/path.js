@@ -10,5 +10,9 @@ export const path = {
 	},
 	whatch: {
 		files: `${srcFolder}/files/**/*.*`,
+	},
+	clean: {
+		files: `${buildFolder}`,
 	}
+
 }
