@@ -5,8 +5,10 @@ export const path = {
 	build: {
 		files: `${buildFolder}/files/`,
 		html: `${buildFolder}`,
+		img: `${buildFolder}/img/`,
 	},
 	src: {
+		img: `${srcFolder}/img/**/*.*`,
 		files: `${srcFolder}/files/**/*.*`,
 		html: `${srcFolder}/*.html`,
 	},
