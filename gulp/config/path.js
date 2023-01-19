@@ -18,6 +18,8 @@ export const path = {
 	},
 	clean: {
 		files: `${buildFolder}`,
-	}
-
-}
+	},
+	server: {
+		html: `${buildFolder}/`,
+	},
+};
