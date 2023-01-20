@@ -6,15 +6,18 @@ export const path = {
 		files: `${buildFolder}/files/`,
 		html: `${buildFolder}`,
 		img: `${buildFolder}/img/`,
+		scss: `${buildFolder}/css/`,
 	},
 	src: {
 		img: `${srcFolder}/img/**/*.*`,
 		files: `${srcFolder}/files/**/*.*`,
 		html: `${srcFolder}/*.html`,
+		scss: `${srcFolder}/scss/style.scss`,
 	},
 	whatch: {
 		files: `${srcFolder}/files/**/*.*`,
 		html: `${srcFolder}/**/*.html`,
+		scss: `${srcFolder}/scss/**/*.scss`,
 	},
 	clean: {
 		files: `${buildFolder}`,
