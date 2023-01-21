@@ -9,3 +9,28 @@ body h1 {
 body h2 {
   color: yellow;
 }
+
+body div {
+  display: -ms-grid;
+  display: grid;
+}
+
+body .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  body h1 {
+    color: green;
+  }
+
+  body h2 {
+    color: white;
+  }
+
+  body {
+    background-color: #000;
+  }
+}
