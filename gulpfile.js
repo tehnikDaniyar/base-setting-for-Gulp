@@ -12,10 +12,11 @@ global.app = {
 import { copy } from './gulp/tasks/copy.js';
 import { reset } from './gulp/tasks/reset.js';
 import { html } from './gulp/tasks/html.js';
-import { img } from './gulp/tasks/img.js';
 import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
+import { images } from './gulp/tasks/images.js';
+
 
 
 //=====watcher==============
@@ -24,10 +25,11 @@ const watcher = () => {
 	gulp.watch(path.whatch.html, html);
 	gulp.watch(path.whatch.scss, scss);
 	gulp.watch(path.whatch.js, js);
+	gulp.watch(path.whatch.images, images);
 };
 
 //=====scripts==============
-const mainScript = gulp.parallel(copy, html, img, scss, js)
+const mainScript = gulp.parallel(copy, html, scss, js, images)
 const dev = gulp.series(reset, mainScript, gulp.parallel(watcher, server))
 
 gulp.task('default', dev);
