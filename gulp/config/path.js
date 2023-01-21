@@ -8,7 +8,7 @@ export const path = {
 		img: `${buildFolder}/img/`,
 		scss: `${buildFolder}/css/`,
 		js: `${buildFolder}/js/`,
-
+		image: `${buildFolder}/img/`,
 	},
 	src: {
 		img: `${srcFolder}/img/**/*.*`,
@@ -16,6 +16,8 @@ export const path = {
 		html: `${srcFolder}/*.html`,
 		scss: `${srcFolder}/scss/style.scss`,
 		js: `${srcFolder}/js/app.js`,
+		image: `${srcFolder}/img/**/*.{jpg, jpeg, png, gif, webp}`,
+		svg: `${srcFolder}/img/**/*.svg`,
 
 	},
 	whatch: {
@@ -23,6 +25,7 @@ export const path = {
 		html: `${srcFolder}/**/*.html`,
 		scss: `${srcFolder}/scss/**/*.scss`,
 		js: `${srcFolder}/js/**/*.js`,
+		image: `${srcFolder}/img/**/*.{jpg, jpeg, png, gif, webp, svg}`,
 	},
 	clean: {
 		files: `${buildFolder}`,
