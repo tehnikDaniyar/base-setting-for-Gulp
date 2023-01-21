@@ -1,5 +1,8 @@
+.no-webp body {
+  background-image: url(../img/02.jpg); }
+
 body {
-  background: rgba(7, 33, 61, 0.986);
+  background-color: #000;
 }
 
 body h1 {
@@ -34,3 +37,5 @@ body .flex {
     background-color: #000;
   }
 }
+
+.webp body { background-image: url(../img/02.webp); }
