@@ -33,4 +33,5 @@ export const path = {
 	server: {
 		html: `${buildFolder}/`,
 	},
+	srcFolder: srcFolder,
 };
