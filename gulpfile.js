@@ -16,6 +16,7 @@ import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
+import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
 
 
 
@@ -29,7 +30,8 @@ const watcher = () => {
 };
 
 //=====scripts==============
-const mainScript = gulp.parallel(copy, html, scss, js, images)
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+const mainScript = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
 const dev = gulp.series(reset, mainScript, gulp.parallel(watcher, server))
 
 gulp.task('default', dev);
