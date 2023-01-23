@@ -13,21 +13,29 @@ export const html = () => {
 		))
 		.pipe(fileinclude())
 		.pipe(app.plugins.replace(/\/base-setting-for-Gulp\/src\/img/gi, 'img'))
-		.pipe(webphtml())
-		.pipe(versionNumber({
-			'value': '%DT%',
-			'append': {
-				'key': '_v',
-				'cover': 0,
-				'to': [
-					'css',
-					'js',
-				]
-			},
-			'output': {
-				'file': 'gulp/version.json'
-			}
-		}))
+		.pipe(
+			app.plugins.if(
+				app.isBuild,
+				webphtml()
+			))
+		.pipe(
+			app.plugins.if(
+				app.isBuild,
+				versionNumber({
+					'value': '%DT%',
+					'append': {
+						'key': '_v',
+						'cover': 0,
+						'to': [
+							'css',
+							'js',
+						]
+					},
+					'output': {
+						'file': 'gulp/version.json'
+					}
+				})
+			))
 		.pipe(app.gulp.dest(app.path.build.html))
 		.pipe(app.plugins.browserSync.stream());
 

@@ -3,6 +3,8 @@ import { path } from './gulp/config/path.js';
 import { plugins } from './gulp/config/plugins.js';
 
 global.app = {
+	isBuild: process.argv.includes('--build'),
+	isDev: !process.argv.includes('--build'),
 	gulp: gulp,
 	path: path,
 	plugins: plugins,
@@ -29,12 +31,17 @@ const watcher = () => {
 	gulp.watch(path.whatch.images, images);
 };
 
-//=====exports==============
-export { svgSprive };
 
 //=====scripts==============
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const mainScript = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
 const dev = gulp.series(reset, mainScript, gulp.parallel(watcher, server))
+const build = gulp.series(reset, mainScript)
+
+//=====exports==============
+export { svgSprive };
+export { dev };
+export { build };
 
 gulp.task('default', dev);
+
