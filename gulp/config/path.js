@@ -38,4 +38,5 @@ export const path = {
 	},
 	srcFolder: srcFolder,
 	rootFolder: rootFolder,
+	buildFolder: buildFolder,
 };
